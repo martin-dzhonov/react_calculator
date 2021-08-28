@@ -12,18 +12,19 @@
 }
 
 .calculator-input {
-  padding-right: 10%;
+  max-width: 20rem;
+  padding-right: 5%;
   border-color: black;
   text-align: right;
-  font-weight: bold;
-  font-size: xx-large;
+  font-size: 150%;
 }
 
 .result {
-  min-height: 4rem;
+  word-wrap: break-word;
+  min-height: 3.5rem;
   color: white;
   background-color: rgb(85, 76, 79);
-  padding-top:1.5rem;
+  padding-top:2rem;
 }
 
 .keys-operators {

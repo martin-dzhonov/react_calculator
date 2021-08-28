@@ -35,7 +35,10 @@ function Calculator() {
   };
 
   const concatNum = (value) => {
-    return currValue === "0" ? String(value) : currValue + value;
+    if(currValue.length < 18){
+       return currValue === "0" ? String(value) : currValue + value;
+    }
+    return currValue;
   };
 
   const performOperation = () => {
@@ -63,11 +66,12 @@ function Calculator() {
     <div className="calculator">
       <div className="calculator-input">
         <div className="result">
-          {!currValue && <div>{operator}</div>}
-          {currValue} 
+        {(!currValue && operator !== "=") && <div>{operator}</div>}
+        <div>{currValue}</div>
         </div>
       </div>
       <div className="calculator-keypad">
+
         <div className="keys-function">
           <CalculatorButton keyValue={"AC"} onClick={clearData} />
           <CalculatorButton keyValue={"\xB1"} onClick={changeSign} />
