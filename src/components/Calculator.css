@@ -1,0 +1,65 @@
+.calculator {
+  width: 20rem;
+  height: 28rem;
+  background-color: rgb(85, 76, 79);
+  display: grid;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: auto;
+}
+
+.calculator-input {
+  padding-right: 10%;
+  border-color: black;
+  text-align: right;
+  font-weight: bold;
+  font-size: xx-large;
+}
+
+.result {
+  min-height: 4rem;
+  color: white;
+  background-color: rgb(85, 76, 79);
+  padding-top:1.5rem;
+}
+
+.keys-operators {
+  grid-area: keys-operators;
+}
+
+.keys-operators button{
+  background-color: rgb(243, 160, 58);
+}
+
+.keys-function {
+  grid-area: keys-function;
+}
+
+.keys-function button{
+  background-color: rgb(102, 93, 96);
+}
+
+.keys-numbers {
+  grid-area: keys-numbers;
+  direction: rtl;
+}
+
+.keys-numbers button{
+  background-color: rgb(128, 126, 127);
+}
+
+.keys-numbers .key-zero {
+  width: 10rem;
+  text-align: left;
+  padding-left: 30%;
+}
+
+.calculator-keypad {
+  display: grid;
+  grid-template-columns: repeat(4, 5rem);
+  grid-template-rows: repeat(5, 5rem);
+  grid-template-areas: "keys-function keys-function keys-function keys-operators" "keys-numbers keys-numbers keys-numbers keys-operators" "keys-numbers keys-numbers keys-numbers keys-operators" "keys-numbers keys-numbers keys-numbers keys-operators" "keys-numbers keys-numbers keys-numbers keys-operators";
+}
