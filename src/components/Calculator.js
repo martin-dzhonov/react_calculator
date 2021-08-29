@@ -25,7 +25,9 @@ function Calculator() {
   };
  
   const percentage = () => {
+    if(currValue){
       setCurrValue(parseFloat(currValue) / 100);
+    }
   };
 
   const insertDot = () => {
